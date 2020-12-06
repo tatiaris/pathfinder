@@ -132,6 +132,21 @@ const set_end_point = (p) => {
   matrix[p[0]][p[1]] = 0;
 }
 
+function mouseClicked() {
+  if (mouseX >= 0 && mouseY >= 0 && mouseX < 20*width && mouseY < 20*height) {
+    let p = get_point(mouseX, mouseY)
+    if (matrix[p[0]][p[1]] == 10) {
+      matrix[p[0]][p[1]] = 0
+      fill('#212528')
+      square(p[1] * 20, p[0] * 20, 20);
+    } else if (!is_start_point(p) && !is_end_point(p) && !setting_start_point && !setting_end_point) {
+      matrix[p[0]][p[1]] = 10
+      fill('#dc3545')
+      square(p[1] * 20, p[0] * 20, 20);
+    }
+  }
+}
+
 function mousePressed() {
   if (mouseX >= 0 && mouseY >= 0 && mouseX < 20*width && mouseY < 20*height) {
     let p = get_point(mouseX, mouseY)
