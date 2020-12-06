@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div class="row center">
+        <h1>Path Finder (Custom Dijkstra's)</h1>
+      </div>
+      <div class="row center">
+        <button id="start" type="button" class="btn btn-success">Start</button>
+        <button id="reset" type="button" class="btn btn-danger">Reset</button>
+      </div>
+      <!-- <div class="row center">
+        <div id="sketch-container" class="row center" style="margin: 0;"></div>
+      </div> -->
+      <div class="row" style="margin-top: 2em;">
+        <div class="col-lg" style="padding: 0;">
+          <div class="margin: 0;" class="row center">
+            <div id="sketch-container" class="row center" style="margin: 0;"></div>
+          </div>
+        </div>
+        <div class="col-sm" style="background-color: #1d2124; padding: 15px; overflow-y: scroll;">
+          <h2>Instructions:</h2>
+          <ul>
+            <li>Start Location: Blue box.</li>
+            <li>End Location: Yellow/Green box.</li>
+            <li>Wall: Red box.</li>
+            <li>Click and drag cursor to create walls (unpassable objects).</li>
+            <li>Click Start button to find path from starting location to the ending location.</li>
+            <li>Click Restart button to remove all walls and paths.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row center">
+        Created by&nbsp;<a href="http://www.tatiaris.com" target="_blank">Rishabh Tatia</a>
+      </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
